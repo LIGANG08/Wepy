@@ -1,0 +1,224 @@
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: silver;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 6%;
+  z-index: 100;
+}
+.spic {
+  display: fixed;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
+  border: 1px solid #989898;
+}
+input{
+  /* display: flex;
+  margin-top: 0; */
+  border: 1px solid silver;
+  border-radius: 20px;
+  background-color: snow;
+  padding: 3px 5px;
+  color: rebeccapurple;
+  font-size: 15px;
+}
+text {
+  color: aqua;
+}
+
+.move {
+  margin-top: 10px;
+  width: 100%;
+}
+.mepic{
+  width: 100%;
+  border: 1px solid;
+  border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round;
+}
+.main {
+  display: flex;
+  font-size: 0.625rem;
+  background-color: sienna;
+  margin: 0;
+  border: 1px solid;
+  border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round;
+}
+.htext {
+  position: absolute;
+  margin-top: -3.3rem;
+  margin-left: 0.5rem;
+}
+.hpic {
+  display: flex;
+  width: 8.375rem;
+  height: 6.25rem;
+  border: 1px solid silver;
+}
+.titlea {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  height: 5%;
+}
+
+.titleb {
+  font-size: 0.625rem;
+  height: 3%;
+}
+.flex-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.korean{
+  padding: 10px;
+  border: 1px solid silver;
+}
+</style>
+
+<template>
+<scroll-view>
+  <view>
+   <view class="container" style="height: {{height}}px; width: {{width}}px">
+    <view class="logo">
+      <input placeholder="🔍 请输入搜索内容" @tap="search" />
+      <!-- <image class="spic" src="{{spic}}" @tap="search"></image> -->
+    </view>
+    <view class="move">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item>
+            <image src="{{item}}" class="mepic" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="titlea">米兰新娘婚纱 ~ Sweet</view>
+    <view class="titleb">Milan wedding wedding dress </view>
+    <view class="flex-photo">
+      <view  class="main" wx:for="{{home}}" wx:key="index">
+        <view class="korean" @tap = "style" data-index="{{index}}">
+          <image class="hpic" src="{{item.pic}}"></image>
+          <text class="htext">{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
+  </scroll-view>
+</template>
+
+<script>
+import home from '../data/home.js'
+import wepy from 'wepy'
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: 'MILAN 畅享幸福'
+  }
+  data = {
+    imgUrls: [
+      'http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2269117905,883006692&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2685210028,3457372075&fm=27&gp=0.jpg',
+      // 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1943435865,804430348&fm=27&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3960877383,1051484866&fm=27&gp=0.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1453502849,2727599889&fm=27&gp=0.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1161813563,3069512331&fm=27&gp=0.jpg',
+      // 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2650753610,2725677441&fm=27&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2563212303,2386777870&fm=27&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=301638266,118195273&fm=27&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1195195877,3732307103&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2977108417,4066448308&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2808921144,383870039&fm=27&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1710119994,1785422236&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1039723149,4180689354&fm=27&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1050848129,653593312&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2792928026,4035569877&fm=27&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=400619145,2816616768&fm=27&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1887976017,3134824751&fm=27&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4109140288,4045698816&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=691853908,3835353995&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1330062990,4245696189&fm=27&gp=0.jpg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: '3000',
+    duration: '300',
+    spic: '../images/search.png',
+    home: '',
+    height: 0,
+    width: 0
+  }
+  methods = {
+    search() {
+      wepy.navigateTo({
+        url: '../pages/search'
+      })
+    },
+    style(e) {
+      var item = e.currentTarget.dataset.index
+      console.log(e, 'item')
+      switch (item) {
+        case 0 : wepy.navigateTo({
+          url: '../pages/Korean'
+        }); break
+        case 1 : wepy.navigateTo({
+          url: '../pages/euramerican'
+        }); break
+        case 2 : wepy.navigateTo({
+          url: '../pages/China'
+        }); break
+        case 3 : wepy.navigateTo({
+          url: '../pages/fresh'
+        }); break
+      }
+    }
+  }
+  onLoad() {
+    let self = this
+    self.home = home
+    // 获取系统信息(高度，宽度)
+    wepy.getSystemInfo({
+      success(res) {
+        self.height = res.windowHeight
+        self.width = res.windowWidth
+      }
+    })
+    console.log(self.width, 'width')
+    console.log(self.height, 'height')
+    // 加载
+    wepy.showLoading({
+      title: '加载中',
+      duration: 2000,
+      image: '../images/ahome.png'
+    })
+
+    // 连接后台
+    wepy.request({
+      url: 'http://127.0.0.1:7001/Img',
+      method: 'GET',
+      success: function(res) {
+        self.home = res.data
+        self.setData({
+          home: res.data
+        })
+        console.log(res.data)
+      }
+    })
+  }
+}
+</script>

@@ -1,0 +1,139 @@
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #383838;
+}
+
+.f_goods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.photo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 3px solid;
+  border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round;
+}
+image {
+  width: 8.75rem;
+  height: 9.375rem;
+}
+
+.fgoods {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid silver;
+  margin: 7px;
+  background-color: #ffffff;
+}
+
+.f_collect {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin-left: 6.25rem;
+  margin-top: -0.75rem;
+}
+
+.f_number {
+  font-size: 0.625rem;
+  color: silver;
+  margin-left: 3.75rem;
+}
+
+.f_introduce {
+  font-size: 0.75rem;
+  color: #B8B8B8;
+  margin-top: 0.312rem;
+}
+
+.f_price {
+  font-size: 0.9375rem;
+  margin-top: 0.9375rem;
+  margin-left: -5rem;
+}
+</style>
+
+<template>
+  <view class="container">
+    <view class="photo">
+    <view class="f_goods">
+      <view class="fgoods" wx:for="{{fresh}}" wx:key="index">
+        <image class="f_pic" src="{{item.pic}}" id="{{index}}" @tap="lagoods"></image>
+        <text class="f_introduce">{{item.title}}</text>
+        <text class="f_price" style="color: red">¥{{item.price}}</text>
+        <text class="f_number">{{item.number}}</text>
+        <image class="f_collect" src="{{item.acollect ? '../images/bcollect.png' : notcollect}}" id="{{index}}" @tap="collect"></image>
+      </view>
+     </view> 
+  </view>
+  </view>
+</template>
+
+<script>
+import fresh from '../data/fresh.js'
+import wepy from 'wepy'
+export default class Fresh extends wepy.page {
+  config = {
+    navigationBarTitleText: '小清新婚纱/wedding'
+  }
+  data = {
+    notcollect: '../images/acollect.png',
+    lacollect: false,
+    acollect: false,
+    fresh: []
+
+  }
+  methods = {
+    collect(e) {
+      let self = this
+      let index = e.currentTarget.id
+      self.fresh[index].acollect = !self.fresh[index].acollect
+      if (self.fresh[index].acollect) {
+        self.fresh[index].f_number++
+      } else {
+        self.fresh[index].f_number--
+      }
+    },
+    lagoods(e) {
+      var item = e.currentTarget.dataset.index
+      console.log(e, 'item')
+      switch (item) {
+        case 0 : wepy.navigateTo({
+          url: '../pages/kla'
+        }); break
+        // case 1 : wepy.navigateTo({
+        //   url: '../pages/klb'
+        // }); break
+      }
+      let self = this
+      const index = e.currentTarget.id
+      wepy.navigateTo({
+        url: `./kla?pic=${fresh[index].pic}&title=${fresh[index].title}&price=${fresh[index].price}`
+      })
+      console.log(self.fresh[index], '111111')
+    }
+  }
+  onLoad() {
+    wepy.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 1000
+    })
+    let self = this
+    self.fresh = fresh
+    console.log(self.fresh, 'aaaaaaaaaa')
+  }
+}
+</script>

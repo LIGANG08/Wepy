@@ -1,0 +1,89 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: silver;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 6%;
+  z-index: 100;
+}
+.spic {
+  display: fixed;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
+  border: 1px solid #989898;
+}
+input{
+  /* display: flex;
+  margin-top: 0; */
+  border: 1px solid silver;
+  border-radius: 20px;
+  background-color: snow;
+  padding: 3px 5px;
+  color: rebeccapurple;
+  font-size: 15px;
+}
+text {
+  color: aqua;
+}
+
+.move {
+  margin-top: 10px;
+  width: 100%;
+}
+.mepic{
+  width: 100%;
+  border: 1px solid;
+  border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round;
+}
+.main {
+  display: flex;
+  font-size: 0.625rem;
+  background-color: sienna;
+  margin: 0;
+  border: 1px solid;
+  border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round;
+}
+.htext {
+  position: absolute;
+  margin-top: -3.3rem;
+  margin-left: 0.5rem;
+}
+.hpic {
+  display: flex;
+  width: 8.375rem;
+  height: 6.25rem;
+  border: 1px solid silver;
+}
+.titlea {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  height: 5%;
+}
+
+.titleb {
+  font-size: 0.625rem;
+  height: 3%;
+}
+.flex-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.korean{
+  padding: 10px;
+  border: 1px solid silver;
+}
