@@ -9,7 +9,7 @@ module.exports = app => {
     * img() {
       let res;
       try {
-        res = yield app.mysql.select('home');
+        res = yield app.mysql.select('move');
       } catch (y) {
         this.ctx.logger.error(y);
         return false;

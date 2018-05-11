@@ -209,12 +209,23 @@ export default class Index extends wepy.page {
 
     // 连接后台
     wepy.request({
-      url: 'http://127.0.0.1:7001/Img',
+      url: 'http://127.0.0.1:7001/himg',
       method: 'GET',
       success: function(res) {
         self.home = res.data
         self.setData({
           home: res.data
+        })
+        console.log(res.data)
+      }
+    })
+    wepy.request({
+      url: 'http://127.0.0.1:7001/mimg',
+      method: 'GET',
+      success: function(res) {
+        self.move = res.data
+        self.setData({
+          move: res.data
         })
         console.log(res.data)
       }
