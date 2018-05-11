@@ -8,9 +8,9 @@
     </view>
     <view class="move">
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
-        <block  wx:for="{{imgUrls}}" wx:key="index">
+        <block  wx:for="{{move}}" wx:key="index">
           <swiper-item>
-            <image src="{{item}}" class="mepic"/>
+            <image src="{{item.Imgurl}}" class="mepic"/>
           </swiper-item>
         </block>
       </swiper>
@@ -19,9 +19,9 @@
     <view class="titlea">米兰新娘婚纱 ~ Sweet</view>
     <view class="titleb">Milan wedding wedding dress </view>
     <view class="flex-photo">
-      <view class="main"  wx:for="{{home}}" wx:key="index">
+      <view class="main"  wx:for="{{homeImg}}" wx:key="index">
         <view class="korean" bindtap="style" data-index="{{index}}">
-          <image class="hpic" src="{{item.pic}}"/>
+          <image class="hpic" src="{{item.Imgurl}}"/>
           <text class="htext">{{item.title}}</text>
         </view>
       </view>

@@ -10,7 +10,7 @@ module.exports = app => {
     if (home.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('home', function(table) {
         table.increments();
-        table.string('Img-url').notNullable().defaultTo('');
+        table.string('Imgurl').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -21,7 +21,7 @@ module.exports = app => {
     if (move.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('move', function(table) {
         table.increments();
-        table.string('Img-url').notNullable().defaultTo('');
+        table.string('Imgurl').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -32,7 +32,7 @@ module.exports = app => {
     if (korean.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('korean', function(table) {
         table.increments();
-        table.string('Img-url').notNullable().defaultTo('');
+        table.string('Imgurl').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -43,7 +43,7 @@ module.exports = app => {
     if (eur.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('eur', function(table) {
         table.increments();
-        table.string('Img-url').notNullable().defaultTo('');
+        table.string('Imgurl').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -54,7 +54,7 @@ module.exports = app => {
     if (china.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('china', function(table) {
         table.increments();
-        table.string('Img-url').notNullable().defaultTo('');
+        table.string('Imgurl').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -65,7 +65,7 @@ module.exports = app => {
     if (fresh.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('fresh', function(table) {
         table.increments();
-        table.string('Img-url').notNullable().defaultTo('');
+        table.string('Imgurl').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
