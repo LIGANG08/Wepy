@@ -33,6 +33,8 @@ module.exports = app => {
       const userSchema = knex.schema.createTableIfNotExists('korean', function(table) {
         table.increments();
         table.string('Imgurl').notNullable().defaultTo('');
+        table.string('title').notNullable().defaultTo('');
+        table.string('price').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -44,6 +46,8 @@ module.exports = app => {
       const userSchema = knex.schema.createTableIfNotExists('eur', function(table) {
         table.increments();
         table.string('Imgurl').notNullable().defaultTo('');
+        table.string('title').notNullable().defaultTo('');
+        table.string('price').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -55,6 +59,8 @@ module.exports = app => {
       const userSchema = knex.schema.createTableIfNotExists('china', function(table) {
         table.increments();
         table.string('Imgurl').notNullable().defaultTo('');
+        table.string('title').notNullable().defaultTo('');
+        table.string('price').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
@@ -66,6 +72,8 @@ module.exports = app => {
       const userSchema = knex.schema.createTableIfNotExists('fresh', function(table) {
         table.increments();
         table.string('Imgurl').notNullable().defaultTo('');
+        table.string('title').notNullable().defaultTo('');
+        table.string('price').notNullable().defaultTo('');
         table.timestamp('creat_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });

@@ -9,7 +9,6 @@
 
 .k_goods {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -31,18 +30,13 @@ image {
 }
 
 .kgoods {
-  /* width: 8.75rem; */
-  /* margin-top: 1rem; */
-  /* margin-left: 0.625rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid silver;
-  /* border: 3px solid;
-  border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round; */
-  margin: 7px;
   background-color: #ffffff;
+  margin: 5px;
 }
 
 .k_collect {
@@ -76,10 +70,9 @@ image {
     <view class="photo">
     <view class="k_goods">
       <view class="kgoods" wx:for="{{korean}}" wx:key="index">
-        <image class="k_pic" src="{{item.pic}}" id="{{index}}" @tap="lagoods"></image>
+        <image class="k_pic" src="{{item.Imgurl}}" id="{{index}}" @tap="lagoods"></image>
         <text class="k_introduce">{{item.title}}</text>
         <text class="k_price">¥ {{item.price}}</text>
-        <text class="k_number">{{item.number}}</text>
         <image class="k_collect" src="{{item.acollect ? '../images/bcollect.png' : notcollect}}" id="{{index}}" @tap="collect"></image>
       </view>
     </view> 
@@ -88,7 +81,7 @@ image {
 </template>
 
 <script>
-import korean from '../data/korean.js'
+// import korean from '../data/korean.js'
 import wepy from 'wepy'
 export default class Korean extends wepy.page {
   config = {
@@ -99,15 +92,13 @@ export default class Korean extends wepy.page {
     notcollect: '../images/acollect.png',
     lacollect: false,
     acollect: false,
-    korean: []
-
+    korean: ''
   }
   methods = {
     collect(e) {
       let self = this
       let index = e.currentTarget.id
       self.korean[index].acollect = !self.korean[index].acollect
-      // self.lacollect = '../images/收藏-选中.png'
       if (self.korean[index].acollect) {
         self.korean[index].k_number++
       } else {
@@ -121,14 +112,15 @@ export default class Korean extends wepy.page {
         case 0 : wepy.navigateTo({
           url: '../pages/kla'
         }); break
-        case 1 : wepy.navigateTo({
-          url: '../pages/klb'
-        }); break
+        // case 1 : wepy.navigateTo({
+        //   url: '../pages/klb'
+        // }); break
       }
       let self = this
       const index = e.currentTarget.id
       wepy.navigateTo({
-        url: `./kla?pic=${korean[index].pic}&title=${korean[index].title}&price=${korean[index].price}`
+        // url: `./kla?pic=${korean[index].Imgurl}&title=${korean[index].title}&price=${korean[index].price}`
+        // url: `{./kla?pic=${korean}}`
       })
       console.log(self.china[index], '111111')
     }
@@ -142,6 +134,7 @@ export default class Korean extends wepy.page {
     // }
   }
   onLoad() {
+    let self = this
     // 加载
     wepy.showToast({
       title: '加载中',
@@ -149,17 +142,16 @@ export default class Korean extends wepy.page {
       duration: 1000
       // image: '../images/ahome.png'
     })
-    let self = this
-    self.korean = korean
+    // 连接后台
     wepy.request({
-      url: 'http://127.0.0.1:7001/Korean',
-      method: 'POST',
-      successs: function (res) {
+      url: 'http://127.0.0.1:7001/k',
+      method: 'GET',
+      success: function (res) {
         self.korean = res.data
         self.setData({
           korean: res.data
         })
-        console.log(res.data)
+        console.log('korean', res.data)
       }
     })
   }

@@ -2,7 +2,7 @@ module.exports = [
   {
     // pic: 'http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg',
     pic: 'https://i04picsos.sogoucdn.com/dfc923c56149246f',
-    title: '2017韩式婚纱',
+    title: '2018韩式婚纱',
     price: 3999,
     number: 0,
     acollect: ''

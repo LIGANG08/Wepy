@@ -6,4 +6,5 @@
 module.exports = app => {
   app.get('/himg', 'home.creat');
   app.get('/mimg', 'move.creat');
+  app.get('/k', 'korean.creat');
 };
