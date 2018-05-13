@@ -30,7 +30,6 @@ import 'wepy-async-function'
 export default class extends wepy.app {
   config = {
     pages: [
-      // 'pages/Korean',
       'pages/index',
       'pages/search',
       'pages/mine',
@@ -47,7 +46,6 @@ export default class extends wepy.app {
       'pages/mycode',
       'pages/kla',
       'pages/confirm',
-      'pages/klb',
       'pages/mypay',
       'pages/mygoods',
       'pages/myappraise',

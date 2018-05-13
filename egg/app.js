@@ -95,6 +95,44 @@ module.exports = app => {
       yield ctx.helper.unique(app, 'user', 'wechat');
     }
 
+    const order = yield app.mysql.query(knex.schema.hasTable('order').toString());
+    if (order.length === 0) {
+      const userSchema = knex.schema.createTableIfNotExists('order', function(table) {
+        table.increments();
+        table.string('Imgurl').notNullable().defaultTo('');
+        table.string('title').notNullable().defaultTo('');
+        table.string('price').notNullable().defaultTo('');
+        table.timestamp('creat_at').defaultTo(knex.fn.now());
+        table.charset('utf8');
+      });
+      yield app.mysql.query(userSchema.toString());
+    }
+
+    const car = yield app.mysql.query(knex.schema.hasTable('car').toString());
+    if (car.length === 0) {
+      const userSchema = knex.schema.createTableIfNotExists('car', function(table) {
+        table.increments();
+        table.string('Imgurl').notNullable().defaultTo('');
+        table.string('title').notNullable().defaultTo('');
+        table.string('price').notNullable().defaultTo('');
+        table.timestamp('creat_at').defaultTo(knex.fn.now());
+        table.charset('utf8');
+      });
+      yield app.mysql.query(userSchema.toString());
+    }
+
+    const collect = yield app.mysql.query(knex.schema.hasTable('collect').toString());
+    if (collect.length === 0) {
+      const userSchema = knex.schema.createTableIfNotExists('collect', function(table) {
+        table.increments();
+        table.string('Imgurl').notNullable().defaultTo('');
+        table.string('title').notNullable().defaultTo('');
+        table.string('price').notNullable().defaultTo('');
+        table.timestamp('creat_at').defaultTo(knex.fn.now());
+        table.charset('utf8');
+      });
+      yield app.mysql.query(userSchema.toString());
+    }
   });
 };
 

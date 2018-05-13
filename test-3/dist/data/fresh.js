@@ -1,52 +1,53 @@
-'use strict';
-
-module.exports = [{
-  pic: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1330062990,4245696189&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}, {
-  pic: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4064038270,1595400132&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}, {
-  pic: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=897783695,942150829&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}, {
-  pic: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=67229818,1333284618&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}, {
-  pic: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3155610230,438529439&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}, {
-  pic: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=122757271,1438254285&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}, {
-  pic: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2372960960,3959808633&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}, {
-  pic: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=994154604,1342887172&fm=27&gp=0.jpg',
-  title: '2018小清新婚纱',
-  price: 3999,
-  number: 0,
-  acollect: ''
-}];
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZyZXNoLmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJwaWMiLCJ0aXRsZSIsInByaWNlIiwibnVtYmVyIiwiYWNvbGxlY3QiXSwibWFwcGluZ3MiOiI7O0FBQUFBLE9BQU9DLE9BQVAsR0FBaUIsQ0FDZjtBQUNFQyxPQUFLLGdHQURQO0FBRUVDLFNBQU8sV0FGVDtBQUdFQyxTQUFPLElBSFQ7QUFJRUMsVUFBUSxDQUpWO0FBS0VDLFlBQVU7QUFMWixDQURlLEVBT1o7QUFDREosT0FBSyxnR0FESjtBQUVEQyxTQUFPLFdBRk47QUFHREMsU0FBTyxJQUhOO0FBSURDLFVBQVEsQ0FKUDtBQUtEQyxZQUFVO0FBTFQsQ0FQWSxFQWFaO0FBQ0RKLE9BQUssOEZBREo7QUFFREMsU0FBTyxXQUZOO0FBR0RDLFNBQU8sSUFITjtBQUlEQyxVQUFRLENBSlA7QUFLREMsWUFBVTtBQUxULENBYlksRUFtQlo7QUFDREosT0FBSyw4RkFESjtBQUVEQyxTQUFPLFdBRk47QUFHREMsU0FBTyxJQUhOO0FBSURDLFVBQVEsQ0FKUDtBQUtEQyxZQUFVO0FBTFQsQ0FuQlksRUF5Qlo7QUFDREosT0FBSywrRkFESjtBQUVEQyxTQUFPLFdBRk47QUFHREMsU0FBTyxJQUhOO0FBSURDLFVBQVEsQ0FKUDtBQUtEQyxZQUFVO0FBTFQsQ0F6QlksRUErQlo7QUFDREosT0FBSywrRkFESjtBQUVEQyxTQUFPLFdBRk47QUFHREMsU0FBTyxJQUhOO0FBSURDLFVBQVEsQ0FKUDtBQUtEQyxZQUFVO0FBTFQsQ0EvQlksRUFxQ1o7QUFDREosT0FBSyxnR0FESjtBQUVEQyxTQUFPLFdBRk47QUFHREMsU0FBTyxJQUhOO0FBSURDLFVBQVEsQ0FKUDtBQUtEQyxZQUFVO0FBTFQsQ0FyQ1ksRUEyQ1o7QUFDREosT0FBSywrRkFESjtBQUVEQyxTQUFPLFdBRk47QUFHREMsU0FBTyxJQUhOO0FBSURDLFVBQVEsQ0FKUDtBQUtEQyxZQUFVO0FBTFQsQ0EzQ1ksQ0FBakIiLCJmaWxlIjoiZnJlc2guanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFtcbiAge1xuICAgIHBpYzogJ2h0dHBzOi8vc3MxLmJkc3RhdGljLmNvbS83MGNGdVhTaF9RMVlueEdrcG9XSzFIRjZoaHkvaXQvdT0xMzMwMDYyOTkwLDQyNDU2OTYxODkmZm09MjcmZ3A9MC5qcGcnLFxuICAgIHRpdGxlOiAnMjAxOOWwj+a4heaWsOWpmue6sScsXG4gICAgcHJpY2U6IDM5OTksXG4gICAgbnVtYmVyOiAwLFxuICAgIGFjb2xsZWN0OiAnJ1xuICB9LCB7XG4gICAgcGljOiAnaHR0cHM6Ly9zczAuYmRzdGF0aWMuY29tLzcwY0Z2SFNoX1ExWW54R2twb1dLMUhGNmhoeS9pdC91PTQwNjQwMzgyNzAsMTU5NTQwMDEzMiZmbT0yNyZncD0wLmpwZycsXG4gICAgdGl0bGU6ICcyMDE45bCP5riF5paw5ama57qxJyxcbiAgICBwcmljZTogMzk5OSxcbiAgICBudW1iZXI6IDAsXG4gICAgYWNvbGxlY3Q6ICcnXG4gIH0sIHtcbiAgICBwaWM6ICdodHRwczovL3NzMC5iZHN0YXRpYy5jb20vNzBjRnZIU2hfUTFZbnhHa3BvV0sxSEY2aGh5L2l0L3U9ODk3NzgzNjk1LDk0MjE1MDgyOSZmbT0yNyZncD0wLmpwZycsXG4gICAgdGl0bGU6ICcyMDE45bCP5riF5paw5ama57qxJyxcbiAgICBwcmljZTogMzk5OSxcbiAgICBudW1iZXI6IDAsXG4gICAgYWNvbGxlY3Q6ICcnXG4gIH0sIHtcbiAgICBwaWM6ICdodHRwczovL3NzMC5iZHN0YXRpYy5jb20vNzBjRnVIU2hfUTFZbnhHa3BvV0sxSEY2aGh5L2l0L3U9NjcyMjk4MTgsMTMzMzI4NDYxOCZmbT0yNyZncD0wLmpwZycsXG4gICAgdGl0bGU6ICcyMDE45bCP5riF5paw5ama57qxJyxcbiAgICBwcmljZTogMzk5OSxcbiAgICBudW1iZXI6IDAsXG4gICAgYWNvbGxlY3Q6ICcnXG4gIH0sIHtcbiAgICBwaWM6ICdodHRwczovL3NzMS5iZHN0YXRpYy5jb20vNzBjRnZYU2hfUTFZbnhHa3BvV0sxSEY2aGh5L2l0L3U9MzE1NTYxMDIzMCw0Mzg1Mjk0MzkmZm09MjcmZ3A9MC5qcGcnLFxuICAgIHRpdGxlOiAnMjAxOOWwj+a4heaWsOWpmue6sScsXG4gICAgcHJpY2U6IDM5OTksXG4gICAgbnVtYmVyOiAwLFxuICAgIGFjb2xsZWN0OiAnJ1xuICB9LCB7XG4gICAgcGljOiAnaHR0cHM6Ly9zczAuYmRzdGF0aWMuY29tLzcwY0Z1SFNoX1ExWW54R2twb1dLMUhGNmhoeS9pdC91PTEyMjc1NzI3MSwxNDM4MjU0Mjg1JmZtPTI3JmdwPTAuanBnJyxcbiAgICB0aXRsZTogJzIwMTjlsI/muIXmlrDlqZrnurEnLFxuICAgIHByaWNlOiAzOTk5LFxuICAgIG51bWJlcjogMCxcbiAgICBhY29sbGVjdDogJydcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vc3MxLmJkc3RhdGljLmNvbS83MGNGdlhTaF9RMVlueEdrcG9XSzFIRjZoaHkvaXQvdT0yMzcyOTYwOTYwLDM5NTk4MDg2MzMmZm09MjcmZ3A9MC5qcGcnLFxuICAgIHRpdGxlOiAnMjAxOOWwj+a4heaWsOWpmue6sScsXG4gICAgcHJpY2U6IDM5OTksXG4gICAgbnVtYmVyOiAwLFxuICAgIGFjb2xsZWN0OiAnJ1xuICB9LCB7XG4gICAgcGljOiAnaHR0cHM6Ly9zczAuYmRzdGF0aWMuY29tLzcwY0Z1SFNoX1ExWW54R2twb1dLMUhGNmhoeS9pdC91PTk5NDE1NDYwNCwxMzQyODg3MTcyJmZtPTI3JmdwPTAuanBnJyxcbiAgICB0aXRsZTogJzIwMTjlsI/muIXmlrDlqZrnurEnLFxuICAgIHByaWNlOiAzOTk5LFxuICAgIG51bWJlcjogMCxcbiAgICBhY29sbGVjdDogJydcbiAgfVxuXVxuIl19
+// module.exports = [
+//   {
+//     pic: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1330062990,4245696189&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }, {
+//     pic: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4064038270,1595400132&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }, {
+//     pic: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=897783695,942150829&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }, {
+//     pic: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=67229818,1333284618&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }, {
+//     pic: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3155610230,438529439&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }, {
+//     pic: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=122757271,1438254285&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }, {
+//     pic: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2372960960,3959808633&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }, {
+//     pic: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=994154604,1342887172&fm=27&gp=0.jpg',
+//     title: '2018小清新婚纱',
+//     price: 3999,
+//     number: 0,
+//     acollect: ''
+//   }
+// ]
+"use strict";
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZyZXNoLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiJmcmVzaC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIG1vZHVsZS5leHBvcnRzID0gW1xuLy8gICB7XG4vLyAgICAgcGljOiAnaHR0cHM6Ly9zczEuYmRzdGF0aWMuY29tLzcwY0Z1WFNoX1ExWW54R2twb1dLMUhGNmhoeS9pdC91PTEzMzAwNjI5OTAsNDI0NTY5NjE4OSZmbT0yNyZncD0wLmpwZycsXG4vLyAgICAgdGl0bGU6ICcyMDE45bCP5riF5paw5ama57qxJyxcbi8vICAgICBwcmljZTogMzk5OSxcbi8vICAgICBudW1iZXI6IDAsXG4vLyAgICAgYWNvbGxlY3Q6ICcnXG4vLyAgIH0sIHtcbi8vICAgICBwaWM6ICdodHRwczovL3NzMC5iZHN0YXRpYy5jb20vNzBjRnZIU2hfUTFZbnhHa3BvV0sxSEY2aGh5L2l0L3U9NDA2NDAzODI3MCwxNTk1NDAwMTMyJmZtPTI3JmdwPTAuanBnJyxcbi8vICAgICB0aXRsZTogJzIwMTjlsI/muIXmlrDlqZrnurEnLFxuLy8gICAgIHByaWNlOiAzOTk5LFxuLy8gICAgIG51bWJlcjogMCxcbi8vICAgICBhY29sbGVjdDogJydcbi8vICAgfSwge1xuLy8gICAgIHBpYzogJ2h0dHBzOi8vc3MwLmJkc3RhdGljLmNvbS83MGNGdkhTaF9RMVlueEdrcG9XSzFIRjZoaHkvaXQvdT04OTc3ODM2OTUsOTQyMTUwODI5JmZtPTI3JmdwPTAuanBnJyxcbi8vICAgICB0aXRsZTogJzIwMTjlsI/muIXmlrDlqZrnurEnLFxuLy8gICAgIHByaWNlOiAzOTk5LFxuLy8gICAgIG51bWJlcjogMCxcbi8vICAgICBhY29sbGVjdDogJydcbi8vICAgfSwge1xuLy8gICAgIHBpYzogJ2h0dHBzOi8vc3MwLmJkc3RhdGljLmNvbS83MGNGdUhTaF9RMVlueEdrcG9XSzFIRjZoaHkvaXQvdT02NzIyOTgxOCwxMzMzMjg0NjE4JmZtPTI3JmdwPTAuanBnJyxcbi8vICAgICB0aXRsZTogJzIwMTjlsI/muIXmlrDlqZrnurEnLFxuLy8gICAgIHByaWNlOiAzOTk5LFxuLy8gICAgIG51bWJlcjogMCxcbi8vICAgICBhY29sbGVjdDogJydcbi8vICAgfSwge1xuLy8gICAgIHBpYzogJ2h0dHBzOi8vc3MxLmJkc3RhdGljLmNvbS83MGNGdlhTaF9RMVlueEdrcG9XSzFIRjZoaHkvaXQvdT0zMTU1NjEwMjMwLDQzODUyOTQzOSZmbT0yNyZncD0wLmpwZycsXG4vLyAgICAgdGl0bGU6ICcyMDE45bCP5riF5paw5ama57qxJyxcbi8vICAgICBwcmljZTogMzk5OSxcbi8vICAgICBudW1iZXI6IDAsXG4vLyAgICAgYWNvbGxlY3Q6ICcnXG4vLyAgIH0sIHtcbi8vICAgICBwaWM6ICdodHRwczovL3NzMC5iZHN0YXRpYy5jb20vNzBjRnVIU2hfUTFZbnhHa3BvV0sxSEY2aGh5L2l0L3U9MTIyNzU3MjcxLDE0MzgyNTQyODUmZm09MjcmZ3A9MC5qcGcnLFxuLy8gICAgIHRpdGxlOiAnMjAxOOWwj+a4heaWsOWpmue6sScsXG4vLyAgICAgcHJpY2U6IDM5OTksXG4vLyAgICAgbnVtYmVyOiAwLFxuLy8gICAgIGFjb2xsZWN0OiAnJ1xuLy8gICB9LCB7XG4vLyAgICAgcGljOiAnaHR0cHM6Ly9zczEuYmRzdGF0aWMuY29tLzcwY0Z2WFNoX1ExWW54R2twb1dLMUhGNmhoeS9pdC91PTIzNzI5NjA5NjAsMzk1OTgwODYzMyZmbT0yNyZncD0wLmpwZycsXG4vLyAgICAgdGl0bGU6ICcyMDE45bCP5riF5paw5ama57qxJyxcbi8vICAgICBwcmljZTogMzk5OSxcbi8vICAgICBudW1iZXI6IDAsXG4vLyAgICAgYWNvbGxlY3Q6ICcnXG4vLyAgIH0sIHtcbi8vICAgICBwaWM6ICdodHRwczovL3NzMC5iZHN0YXRpYy5jb20vNzBjRnVIU2hfUTFZbnhHa3BvV0sxSEY2aGh5L2l0L3U9OTk0MTU0NjA0LDEzNDI4ODcxNzImZm09MjcmZ3A9MC5qcGcnLFxuLy8gICAgIHRpdGxlOiAnMjAxOOWwj+a4heaWsOWpmue6sScsXG4vLyAgICAgcHJpY2U6IDM5OTksXG4vLyAgICAgbnVtYmVyOiAwLFxuLy8gICAgIGFjb2xsZWN0OiAnJ1xuLy8gICB9XG4vLyBdXG4iXX0=

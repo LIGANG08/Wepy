@@ -4,8 +4,8 @@
     <view class="k_goods">
       <view class="kgoods"  wx:for="{{korean}}" wx:key="index">
         <image class="k_pic" src="{{item.Imgurl}}" id="{{index}}" bindtap="lagoods"/>
-        <text class="k_introduce">{{item.title}}</text>
-        <text class="k_price">¥ {{item.price}}</text>
+        <text class="k_introduce" id="{{index}}">{{item.title}}</text>
+        <text class="k_price" id="{{index}}">¥ {{item.price}}</text>
         <image class="k_collect" src="{{item.acollect ? '../images/bcollect.png' : notcollect}}" id="{{index}}" bindtap="collect"/>
       </view>
     </view> 

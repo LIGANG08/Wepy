@@ -6,6 +6,16 @@
   align-items: center;
   /* background-color:salmon; */
 }
+.kgoods{
+  height: 30px;
+  border: 1px solid black;
+  background: black;
+}
+.checkpic{
+  width: 21px;
+  height: 20px;
+  margin-left: 5px;
+}
 </style>
 
 <template>
@@ -20,13 +30,16 @@
     </view>
     <view class="titleb"></view>
     <view class="main">
-
+      <view class="kgoods" wx:for="{{cart}}" wx:key="index">
+        <image class="checkpic" src="{{item.check_pic ? '../images/check.png' : circlepic}}" id="{{index}}" @tap="check_pic"></image>
+      </view>
     </view>
   </view>
 </template>
 
 <script>
 import wepy from 'wepy'
+import cart from '../data/cart.js'
 export default class Index extends wepy.page {
   config = {
     navigationBarTitleText: '收藏'

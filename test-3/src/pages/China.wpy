@@ -76,7 +76,7 @@ image {
     <view class="photo">
     <view class="c_goods">
       <view class="cgoods" wx:for="{{china}}" wx:key="index">
-        <image class="c_pic" src="{{item.pic}}" id="{{index}}" @tap="lagoods"></image>
+        <image class="c_pic" src="{{item.Imgurl}}" id="{{index}}" @tap="lagoods"></image>
         <text class="c_introduce">{{item.title}}</text>
         <text class="c_price">¥{{item.price}}</text>
         <text class="c_number">{{item.number}}</text>
@@ -141,15 +141,25 @@ export default class China extends wepy.page {
     // }
   }
   onLoad() {
+    let self = this
     wepy.showToast({
       title: '加载中',
       icon: 'loading',
       duration: 1000
       // image: '../images/ahome.png'
     })
-    let self = this
-    self.china = china
-    console.log(self.china, 'aaaaaaaaaa')
+      // 连接后台
+    wepy.request({
+      url: 'http://127.0.0.1:7001/c',
+      method: 'GET',
+      success: function (res) {
+        self.china = res.data
+        self.setData({
+          china: res.data
+        })
+        console.log('china', res.data)
+      }
+    })
   }
 }
 </script>

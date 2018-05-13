@@ -71,8 +71,8 @@ image {
     <view class="k_goods">
       <view class="kgoods" wx:for="{{korean}}" wx:key="index">
         <image class="k_pic" src="{{item.Imgurl}}" id="{{index}}" @tap="lagoods"></image>
-        <text class="k_introduce">{{item.title}}</text>
-        <text class="k_price">¥ {{item.price}}</text>
+        <text class="k_introduce" id="{{index}}">{{item.title}}</text>
+        <text class="k_price" id="{{index}}">¥ {{item.price}}</text>
         <image class="k_collect" src="{{item.acollect ? '../images/bcollect.png' : notcollect}}" id="{{index}}" @tap="collect"></image>
       </view>
     </view> 
@@ -82,6 +82,7 @@ image {
 
 <script>
 // import korean from '../data/korean.js'
+// import kdata from '../mysql/index'
 import wepy from 'wepy'
 export default class Korean extends wepy.page {
   config = {
@@ -112,26 +113,25 @@ export default class Korean extends wepy.page {
         case 0 : wepy.navigateTo({
           url: '../pages/kla'
         }); break
-        // case 1 : wepy.navigateTo({
-        //   url: '../pages/klb'
-        // }); break
+        case 1 : wepy.navigateTo({
+          url: '../pages/klb'
+        }); break
       }
+      wepy.navigateTo({
+        url: '../pages/kla'
+      })
       let self = this
+      // var res
       const index = e.currentTarget.id
       wepy.navigateTo({
         // url: `./kla?pic=${korean[index].Imgurl}&title=${korean[index].title}&price=${korean[index].price}`
-        // url: `{./kla?pic=${korean}}`
+        // url: `./kla?pic=${data[index].pic}&title=${item.title}&price=${item.price}`
+        // url: ''
+        // url: `./kla?data=${res.data}`
       })
       console.log(self.china[index], '111111')
+      console.log('pic', item.Imgurl)
     }
-    // lagoods(e) {
-    //   let self = this
-    //   const index = e.currentTarget.id
-    //   wepy.navigateTo({
-    //     url: `./kla`
-    //   })
-    //   console.log(self.korean[index], '111111')
-    // }
   }
   onLoad() {
     let self = this
@@ -140,7 +140,6 @@ export default class Korean extends wepy.page {
       title: '加载中',
       icon: 'loading',
       duration: 1000
-      // image: '../images/ahome.png'
     })
     // 连接后台
     wepy.request({

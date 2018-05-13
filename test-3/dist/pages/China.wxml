@@ -3,7 +3,7 @@
     <view class="photo">
     <view class="c_goods">
       <view class="cgoods"  wx:for="{{china}}" wx:key="index">
-        <image class="c_pic" src="{{item.pic}}" id="{{index}}" bindtap="lagoods"/>
+        <image class="c_pic" src="{{item.Imgurl}}" id="{{index}}" bindtap="lagoods"/>
         <text class="c_introduce">{{item.title}}</text>
         <text class="c_price">¥{{item.price}}</text>
         <text class="c_number">{{item.number}}</text>

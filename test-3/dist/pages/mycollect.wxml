@@ -10,6 +10,8 @@
     </view>
     <view class="titleb"/>
     <view class="main">
-
+      <view class="kgoods"  wx:for="{{cart}}" wx:key="index">
+        <image class="checkpic" src="{{item.check_pic ? '../images/check.png' : circlepic}}" id="{{index}}" bindtap="check_pic"/>
+      </view>
     </view>
   </view>

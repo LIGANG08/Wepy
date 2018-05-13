@@ -2,8 +2,8 @@
   <view class="container">
     <view class="photo">
     <view class="e_goods">
-      <view class="egoods"  wx:for="{{euramerican}}" wx:key="index">
-        <image class="e_pic" src="{{item.pic}}" id="{{index}}" bindtap="lagoods"/>
+      <view class="egoods"  wx:for="{{eur}}" wx:key="index">
+        <image class="e_pic" src="{{item.Imgurl}}" id="{{index}}" bindtap="lagoods"/>
         <text class="e_introduce">{{item.title}}</text>
         <text class="e_price">¥{{item.price}}</text>
         <text class="e_number">{{item.number}}</text>

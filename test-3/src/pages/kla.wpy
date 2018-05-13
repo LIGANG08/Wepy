@@ -260,6 +260,8 @@
 
 <script>
 import wepy from 'wepy'
+// import data from './Korean'
+// import korean from './Korean'
 export default class Index extends wepy.page {
   config = {
     navigationBarTitleText: 'kla'
@@ -503,12 +505,14 @@ export default class Index extends wepy.page {
     // }
   onLoad(data) {
     let self = this
+    // self.title = korean.title
     self.title = data.title
     self.image = data.pic
     self.price = data.price
     console.log(self.title, '22222')
     console.log(self.image, '图片')
     console.log(self.price, '价格')
+    console.log(data.setData.title, 'setdata')
   }
 }
 </script>

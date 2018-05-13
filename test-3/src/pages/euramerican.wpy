@@ -75,8 +75,8 @@ image {
   <view class="container">
     <view class="photo">
     <view class="e_goods">
-      <view class="egoods" wx:for="{{euramerican}}" wx:key="index">
-        <image class="e_pic" src="{{item.pic}}" id="{{index}}" @tap="lagoods"></image>
+      <view class="egoods" wx:for="{{eur}}" wx:key="index">
+        <image class="e_pic" src="{{item.Imgurl}}" id="{{index}}" @tap="lagoods"></image>
         <text class="e_introduce">{{item.title}}</text>
         <text class="e_price">¥{{item.price}}</text>
         <text class="e_number">{{item.number}}</text>
@@ -88,7 +88,7 @@ image {
 </template>
 
 <script>
-import euramerican from '../data/euramerican.js'
+// import euramerican from '../data/euramerican.js'
 import wepy from 'wepy'
 export default class Euramerican extends wepy.page {
   config = {
@@ -127,7 +127,7 @@ export default class Euramerican extends wepy.page {
       let self = this
       const index = e.currentTarget.id
       wepy.navigateTo({
-        url: `./kla?pic=${euramerican[index].pic}&title=${euramerican[index].title}&price=${euramerican[index].price}`
+        // url: `./kla?pic=${euramerican[index].pic}&title=${euramerican[index].title}&price=${euramerican[index].price}`
       })
       console.log(self.euramerican[index], '111111')
     }
@@ -141,15 +141,25 @@ export default class Euramerican extends wepy.page {
     // }
   }
   onLoad() {
+    let self = this
     wepy.showToast({
       title: '加载中',
       icon: 'loading',
       duration: 1000
       // image: '../images/ahome.png'
     })
-    let self = this
-    self.euramerican = euramerican
-    console.log(self.euramerican, 'aaaaaaaaaa')
+    // 连接后台
+    wepy.request({
+      url: 'http://127.0.0.1:7001/e',
+      method: 'GET',
+      success: function (res) {
+        self.eur = res.data
+        self.setData({
+          eur: res.data
+        })
+        console.log('eur', res.data)
+      }
+    })
   }
 }
 </script>
