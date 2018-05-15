@@ -135,9 +135,6 @@
 .attribute {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* border: 1px solid black; */
     margin-left: 5px;
 }
 .attribute text {
@@ -503,16 +500,15 @@ export default class Index extends wepy.page {
     //     title: '当前页面'
     //   })
     // }
-  onLoad(data) {
+  onLoad(params) {
     let self = this
+    console.log(params, 'ppppppppp')
     // self.title = korean.title
-    self.title = data.title
-    self.image = data.pic
-    self.price = data.price
+    self.title = params.title
+    self.image = params.pic
+    self.price = params.price
     console.log(self.title, '22222')
     console.log(self.image, '图片')
-    console.log(self.price, '价格')
-    console.log(data.setData.title, 'setdata')
   }
 }
 </script>

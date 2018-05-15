@@ -6,13 +6,3 @@
   align-items: center;
   /* background-color:salmon; */
 }
-.kgoods{
-  height: 30px;
-  border: 1px solid black;
-  background: black;
-}
-.checkpic{
-  width: 21px;
-  height: 20px;
-  margin-left: 5px;
-}

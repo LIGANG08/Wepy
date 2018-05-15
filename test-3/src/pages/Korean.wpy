@@ -120,20 +120,14 @@ export default class Korean extends wepy.page {
       wepy.navigateTo({
         url: '../pages/kla'
       })
-      let self = this
-      // var res
-      const index = e.currentTarget.id
+      // let self = this
+      // const index = e.currentTarget.id
       wepy.navigateTo({
-        // url: `./kla?pic=${korean[index].Imgurl}&title=${korean[index].title}&price=${korean[index].price}`
-        // url: `./kla?pic=${data[index].pic}&title=${item.title}&price=${item.price}`
-        // url: ''
-        // url: `./kla?data=${res.data}`
+        // url: `./kla?pic=${korean[index].pic}&title=${korean[index].title}&price=${korean[index].price}`
       })
-      console.log(self.china[index], '111111')
-      console.log('pic', item.Imgurl)
     }
   }
-  onLoad() {
+  onLoad(res) {
     let self = this
     // 加载
     wepy.showToast({
@@ -144,7 +138,12 @@ export default class Korean extends wepy.page {
     // 连接后台
     wepy.request({
       url: 'http://127.0.0.1:7001/k',
-      method: 'GET',
+      method: 'POST',
+      data: {
+        pic: res.pic,
+        title: res.title,
+        price: res.price
+      },
       success: function (res) {
         self.korean = res.data
         self.setData({

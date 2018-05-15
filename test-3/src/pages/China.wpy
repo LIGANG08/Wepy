@@ -88,7 +88,7 @@ image {
 </template>
 
 <script>
-import china from '../data/china.js'
+// import china from '../data/china.js'
 import wepy from 'wepy'
 export default class China extends wepy.page {
   config = {
@@ -127,7 +127,7 @@ export default class China extends wepy.page {
       let self = this
       const index = e.currentTarget.id
       wepy.navigateTo({
-        url: `./kla?pic=${china[index].pic}&title=${china[index].title}&price=${china[index].price}`
+        // url: `./kla?pic=${china[index].pic}&title=${china[index].title}&price=${china[index].price}`
       })
       console.log(self.china[index], '111111')
     }
