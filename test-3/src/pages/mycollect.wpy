@@ -6,16 +6,56 @@
   align-items: center;
   /* background-color:salmon; */
 }
+
+.main{
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.kgoods{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid silver;
+  padding: 20px;
+}
+
+.pic{
+  /* display: flex; */
+  width: 90px;
+  height: 90px;
+  margin-left: 10px;
+}
+
+.introduce{
+  font-size: 15px;
+  margin-left: 25px;
+  color: gray;
+}
+
+.box_a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 </style>
 
 <template>
   <view class="container">
-    <view class="move">
-        <image class="mepic" src = "{{item}}"></image>
-    </view>
+    <view class="main">
+      <view class="kgoods" wx:for="{{collect}}" wx:key="index">
+          <image class="pic" src="{{item.pic}}" id="{{index}}" @tap="lagoods"></image>
+          <view class="box_a">
+            <text class="introduce">{{item.title}}</text>
+            <text class="price">¥ {{item.price}}</text>
+          </view>
+      </view>
+    </view>  
     <view class="title">
       <text class = "ta">{{ta}}</text>
-      <text class = "tb">没有收藏@~</text>
+      <text class = "tb">已到底部</text>
       <text class = "tc">{{tc}}</text>
     </view>
     <view class="titleb"></view>
@@ -26,15 +66,20 @@
 </template>
 
 <script>
+import collect from '../data/collect.js'
 import wepy from 'wepy'
 export default class Index extends wepy.page {
   config = {
     navigationBarTitleText: '收藏'
   }
   data = {
-    item: '../images/收藏.png'
+    item: '../images/收藏.png',
+    collect: []
   }
   methods = {}
-  onLoad() {}
+  onLoad() {
+    let self = this
+    self.collect = collect
+  }
 }
 </script>

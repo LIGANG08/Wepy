@@ -15,6 +15,7 @@
   margin-top: 7px;
   margin-bottom: 7px;
 }
+
 .photo{
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@
   border: 3px solid;
   border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round;
 }
+
 image {
   width: 8.75rem;
   height: 9.375rem;
@@ -63,6 +65,7 @@ image {
   margin-top: 0.9375rem;
   margin-left: -5rem;
 }
+
 </style>
 
 <template>
@@ -107,23 +110,27 @@ export default class Korean extends wepy.page {
       }
     },
     lagoods(e) {
-      var item = e.currentTarget.dataset.index
-      console.log(e, 'item')
-      switch (item) {
-        case 0 : wepy.navigateTo({
-          url: '../pages/kla'
-        }); break
-        case 1 : wepy.navigateTo({
-          url: '../pages/klb'
-        }); break
-      }
-      wepy.navigateTo({
-        url: '../pages/kla'
-      })
+      let self = this
+      // var item = e.currentTarget.index
+      // console.log(e, item,'item')
+      // switch (item) {
+      //   case 0 : wepy.navigateTo({
+      //     url: '../pages/kla'
+      //   }); break
+      //   case 1 : wepy.navigateTo({
+      //     url: '../pages/klb'
+      //   }); break
+      // }
+      // wepy.navigateTo({
+      //   url: '../pages/kla'
+      // })
       // let self = this
-      // const index = e.currentTarget.id
+      // koreanImg = res.data
+      const index = e.currentTarget.id
+      console.log(self.koreanImg[index],'item')
       wepy.navigateTo({
-        // url: `./kla?pic=${korean[index].pic}&title=${korean[index].title}&price=${korean[index].price}`
+        url: `../pages/kla?pic=${self.koreanImg[index].Imgurl}&title=${self.koreanImg[index].title}&price=${self.koreanImg[index].price}`
+        // url: `./kla?pic = $ {this.koreanImg[index].Imgurl}＆title = $ {this.koreanImg[index].title}＆price = $ {this.koreanImg[index].price}`
       })
     }
   }

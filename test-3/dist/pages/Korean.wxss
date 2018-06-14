@@ -15,6 +15,7 @@
   margin-top: 7px;
   margin-bottom: 7px;
 }
+
 .photo{
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@
   border: 3px solid;
   border-image: url(http://img1.imgtn.bdimg.com/it/u=2553322381,2925312760&fm=27&gp=0.jpg)30 30 round;
 }
+
 image {
   width: 8.75rem;
   height: 9.375rem;
@@ -63,3 +65,4 @@ image {
   margin-top: 0.9375rem;
   margin-left: -5rem;
 }
+

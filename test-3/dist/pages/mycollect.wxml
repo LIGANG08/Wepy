@@ -1,11 +1,17 @@
 
   <view class="container">
-    <view class="move">
-        <image class="mepic" src="{{item}}"/>
-    </view>
+    <view class="main">
+      <view class="kgoods"  wx:for="{{collect}}" wx:key="index">
+          <image class="pic" src="{{item.pic}}" id="{{index}}" bindtap="lagoods"/>
+          <view class="box_a">
+            <text class="introduce">{{item.title}}</text>
+            <text class="price">¥ {{item.price}}</text>
+          </view>
+      </view>
+    </view>  
     <view class="title">
       <text class="ta">{{ta}}</text>
-      <text class="tb">没有收藏@~</text>
+      <text class="tb">已到底部</text>
       <text class="tc">{{tc}}</text>
     </view>
     <view class="titleb"/>

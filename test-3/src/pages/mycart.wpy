@@ -292,6 +292,18 @@ export default class Index extends wepy.page {
   onLoad() {
     let self = this
     self.cart = cart
+      // 连接后台
+    // wepy.request({
+    //   url: 'http://127.0.0.1:7001/car',
+    //   method: 'GET',
+    //   success: function (res) {
+    //     self.car = res.data
+    //     self.setData({
+    //       car: res.data
+    //     })
+    //     console.log('car', res.data)
+    //   }
+    // })
   }
 }
 </script>

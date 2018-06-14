@@ -10,4 +10,5 @@ module.exports = app => {
   app.get('/e', 'euramerican.creat');
   app.get('/c', 'china.creat');
   app.get('/f', 'fresh.creat');
+  app.get('/car', 'car.creat');
 };

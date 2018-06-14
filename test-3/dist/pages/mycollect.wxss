@@ -6,3 +6,37 @@
   align-items: center;
   /* background-color:salmon; */
 }
+
+.main{
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.kgoods{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid silver;
+  padding: 20px;
+}
+
+.pic{
+  /* display: flex; */
+  width: 90px;
+  height: 90px;
+  margin-left: 10px;
+}
+
+.introduce{
+  font-size: 15px;
+  margin-left: 25px;
+  color: gray;
+}
+
+.box_a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

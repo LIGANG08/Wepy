@@ -271,6 +271,7 @@ export default class Index extends wepy.page {
     image: '',
     price: '',
     title: '',
+    koreanImgurl: [],
     numbers: '数量',
     subtraction: '-',
     number: 1,
@@ -500,15 +501,16 @@ export default class Index extends wepy.page {
     //     title: '当前页面'
     //   })
     // }
-  onLoad(params) {
+  async onLoad(params) {
     let self = this
-    console.log(params, 'ppppppppp')
+    // this.data.koreanImgurl = JSON.parse(params.koreanImgurl)
+    console.log(params.title, 'ppppppppp')
     // self.title = korean.title
     self.title = params.title
     self.image = params.pic
     self.price = params.price
-    console.log(self.title, '22222')
-    console.log(self.image, '图片')
+    console.log(self.title, self.price, self.image, '22222')
+    this.$apply()
   }
 }
 </script>
