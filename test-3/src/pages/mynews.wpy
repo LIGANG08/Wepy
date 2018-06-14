@@ -59,6 +59,9 @@ export default class Index extends wepy.page {
     navigationBarTitleText: '我的消息'
   }
   data = {
+    ta: '通知',
+    tb: '交易物流',
+    title: '暂时还没有消息哦！！！'
   }
   methods = {}
   onLoad() { }

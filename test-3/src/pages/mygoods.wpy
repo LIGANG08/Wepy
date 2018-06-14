@@ -59,6 +59,9 @@ export default class Index extends wepy.page {
     navigationBarTitleText: '待收货'
   }
   data = {
+    ta: '查看收货记录',
+    tb: '确定',
+    title: '您还没有相关的订单，可以去看看有哪些想买的！！！'
   }
   methods = {}
   onLoad() { }

@@ -59,6 +59,9 @@ export default class Index extends wepy.page {
     navigationBarTitleText: '意见反馈'
   }
   data = {
+    ta: '查看反馈记录',
+    tb: '确定',
+    title: '您还没有相关的反馈！！！'
   }
   methods = {}
   onLoad() { }

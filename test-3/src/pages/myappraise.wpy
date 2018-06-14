@@ -59,6 +59,9 @@ export default class Index extends wepy.page {
     navigationBarTitleText: '待评价'
   }
   data = {
+    ta: '查看评价记录',
+    tb: '确定',
+    title: '您还没有相关的物品需要评价！！！'
   }
   methods = {}
   onLoad() { }

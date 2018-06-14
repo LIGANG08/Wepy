@@ -69,7 +69,7 @@ image {
   <view class="container">
     <view class="photo">
     <view class="k_goods">
-      <view class="kgoods" wx:for="{{korean}}" wx:key="index">
+      <view class="kgoods" wx:for="{{koreanImg}}" wx:key="index">
         <image class="k_pic" src="{{item.Imgurl}}" id="{{index}}" @tap="lagoods"></image>
         <text class="k_introduce" id="{{index}}">{{item.title}}</text>
         <text class="k_price" id="{{index}}">¥ {{item.price}}</text>
@@ -93,7 +93,7 @@ export default class Korean extends wepy.page {
     notcollect: '../images/acollect.png',
     lacollect: false,
     acollect: false,
-    korean: ''
+    koreanImg: ''
   }
   methods = {
     collect(e) {
@@ -138,16 +138,13 @@ export default class Korean extends wepy.page {
     // 连接后台
     wepy.request({
       url: 'http://127.0.0.1:7001/k',
-      method: 'POST',
+      method: 'GET',
       data: {
-        pic: res.pic,
-        title: res.title,
-        price: res.price
       },
       success: function (res) {
-        self.korean = res.data
+        self.koreanImg = res.data
         self.setData({
-          korean: res.data
+          koreanImg: res.data
         })
         console.log('korean', res.data)
       }
